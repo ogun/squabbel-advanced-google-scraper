@@ -1,7 +1,6 @@
-Scraping Google for Fun and Profit
-==================================
+# Scraping Google for Fun and Profit
 
- ![](https://www.paypalobjects.com/de_DE/i/scr/pixel.gif) This information and source code is provided for free. Anyway a donation would be appreciated.
+![](https://www.paypalobjects.com/de_DE/i/scr/pixel.gif) This information and source code is provided for free. Anyway a donation would be appreciated.
 
 written 2010 by Justone \[justone(at)squabbel.com\], updates 2011, rewrite 2012-2014  
 update from 16th Nov. 2010: The scraper source code is now compatible with the new google design (instant, previews, etc)  
@@ -10,15 +9,13 @@ update 2012: some bugfixes
 update 2012: A better google scraper was written this year, check out the [Google Rank Checker](http://google-rank-checker.squabbel.com)  
 update 2017: I have been developing backend-code for a huge scraping service at [Scraping services](http://scraping.services)
 
-
 I've a great update to all my readers! I spent weeks and developed a much more advanced project, free again!
 Instead of billing for my work (and I had more than a few requests to write custom code) I added donation buttons and hope they will be used.
 
 **Make sure to check out the successor of this code:
 the new (2012-2016) Open Source **
 
-[Google Rank Checker (PHP)](http://google-rank-checker.squabbel.com)
-==============================================================
+# [Google Rank Checker (PHP)](http://google-rank-checker.squabbel.com)
 
 Google SERP scraping is an often required task for SEO experts and Internet professionals.
 By scraping it is possible to monitor ranking positions (SERP), the PPC market,
@@ -48,37 +45,34 @@ It can last from minutes to hours, you immediately need to stop your current scr
 
 **How does Google detect scraping ?**
 That's the key question and not too hard to find out:
-Google mainly watches for
-\* the IP address: the IP is the only identification sign of a user they use
-\* keyword changes: normal users don't look for many keywords in a short time
-\* frequency: every access to google is matched with allowed access patterns
+Google mainly watches for \* the IP address: the IP is the only identification sign of a user they use \* keyword changes: normal users don't look for many keywords in a short time \* frequency: every access to google is matched with allowed access patterns
 
 ### Hints for scraping Google and avoiding detection
 
-*    First of all you need a reliable proxy source to be able to change your IP-Address.
-    Of course the proxies have to be high anonymous, they should be fast and there
-    should have been no previous abuse against google.
-    I can personally recommend the private proxy solution at [www.seo-proxies.com](http://www.seo-proxies.com) but you
-    can use any proxy solution as long as it delivers quality IPs that have not been used for Google access before.
-    For continued scraping activity you should use between 50 and 150 proxies depending on the
-    average resultset of each search query. Some projects might require even more.
-    **Important: Do not scrape with too few IPs and never continue scraping when Google did detect you!**
-*    Make sure you clear Cookies after each IP change or disable them completely
-*    Set the number of search results to the maximum (100) by adding &num=100 to the search URL
-*    Do not use threads (multiple scraping processes at the same time) if not required. You can scrape millions
-    of results per day without using threads.
-*    Append other keywords to your main search, google will make it hard to get more than 1000
-    results (for a particular topic) but you can actually get almost all URLs.
-*    Change your IP at the correct moments. This is a key element of your scraping success!
-    When getting 300-1000 results per keyword you should rotate your IP after each keyword change.
-    When getting less than 300 results you can scrape a few keywords with one IP but you might
-    have to add a delay (sleep() )  or you have to increase the number of proxies.
-*    In case you receive a virus/captcha warning it's time to immediately stop your actions.
-    Captcha means : Your scraping has been detected !
-    Add more proxies, if you already use 100 or more you might have to use another source
-    of IPs (see my recommendation for private proxies above, it is unlikely you can find a better source).
-    If you do your job right you can scrape Google 24 hours a day without being detected.
-*   For reliable scraping you need to avoid any sort of black or graylisting, do not scrape more than 500 requests per 24 hours (well spread) per IP address.
+- First of all you need a reliable proxy source to be able to change your IP-Address.
+  Of course the proxies have to be high anonymous, they should be fast and there
+  should have been no previous abuse against google.
+  I can personally recommend the private proxy solution at [www.seo-proxies.com](http://www.seo-proxies.com) but you
+  can use any proxy solution as long as it delivers quality IPs that have not been used for Google access before.
+  For continued scraping activity you should use between 50 and 150 proxies depending on the
+  average resultset of each search query. Some projects might require even more.
+  **Important: Do not scrape with too few IPs and never continue scraping when Google did detect you!**
+- Make sure you clear Cookies after each IP change or disable them completely
+- Set the number of search results to the maximum (100) by adding &num=100 to the search URL
+- Do not use threads (multiple scraping processes at the same time) if not required. You can scrape millions
+  of results per day without using threads.
+- Append other keywords to your main search, google will make it hard to get more than 1000
+  results (for a particular topic) but you can actually get almost all URLs.
+- Change your IP at the correct moments. This is a key element of your scraping success!
+  When getting 300-1000 results per keyword you should rotate your IP after each keyword change.
+  When getting less than 300 results you can scrape a few keywords with one IP but you might
+  have to add a delay (sleep() ) or you have to increase the number of proxies.
+- In case you receive a virus/captcha warning it's time to immediately stop your actions.
+  Captcha means : Your scraping has been detected !
+  Add more proxies, if you already use 100 or more you might have to use another source
+  of IPs (see my recommendation for private proxies above, it is unlikely you can find a better source).
+  If you do your job right you can scrape Google 24 hours a day without being detected.
+- For reliable scraping you need to avoid any sort of black or graylisting, do not scrape more than 500 requests per 24 hours (well spread) per IP address.
 
 ### For your use and customization: an advanced Google scraper written in PHP for web or console usage
 
@@ -97,13 +91,13 @@ If you have a license at www.seo-proxies.com then all you need to do is to chang
 What you should consider to do is to add database support for storing results and managing keywords!
 For professional projects PHP is well suited but you should use the scraper as console script for best reliability.
 Download the two source code files here:  
-[scraper.php](source/scraper.php.txt)  
-[functions.php](source/functions.php.txt)  
+[scraper.php](scraper.php)  
+[functions.php](functions.php)
 
 **Make sure to also check our the highly advanced and new (since 2012) free** [Google Rank Checker](http://google-rank-checker.squabbel.com), opensource PHP and much better than this project
 
-[Scraping as a service](https://scraping.services/?faq&chapter=why_scraping_service)
-======================
+# [Scraping as a service](https://scraping.services/?faq&chapter=why_scraping_service)
+
 During the past two years I was helping a scraping startup to get their scraping up to highest levels.
 From all my work this is the most advanced one, sadly I can not share the backend code but I had the opportunity to write part of their [Scraping API](http://scraping.services/?api&chapter=Source+Code) which is Open Source licensed.
 

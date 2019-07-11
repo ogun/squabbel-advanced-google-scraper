@@ -1,5 +1,4 @@
-Scraping Google Ranks for Fun and Profit
-========================================
+# Scraping Google Ranks for Fun and Profit
 
 written 2012, by Justone \[justone(at)squabbel.com\]  
 update and bugfixes: 4/28/2012  
@@ -8,7 +7,7 @@ added filter configuration to support exact human results: 12/07/2012
 bugfix in functions.php: 6/13/2013  
 rewrite of Google parser: 3/19/2014  
 small fixes: 6/19/2016  
-Appended information about [scraping.services](http://scraping.services) 1/5/2017  
+Appended information about [scraping.services](http://scraping.services) 1/5/2017
 
 Using my experience on scraping and backend IT solutions I had written the free [Advanced Google Scraper](http://google-scraper.squabbel.com) in 2009.
 The source code was offered for free online and received feedback every week.
@@ -19,7 +18,7 @@ Due to the complete lack of experience for such projects by average developers I
 I can help with IP addresses, development, hosting, server management and whatever else you require to run such a challenging project professionally.
 However it is not too hard to get everything up and running if you or your developer has a bit experience with servers and PHP.
 
-   ![](https://www.paypalobjects.com/de_DE/i/scr/pixel.gif)
+![](https://www.paypalobjects.com/de_DE/i/scr/pixel.gif)
 
 [Scraping through a service (2017)
 ](https://scraping.services/?faq&chapter=why_scraping_service)
@@ -32,15 +31,15 @@ In any case I would suggest reading this website, you will learn a lot of tricks
 
 **The new and free Google Rank Checker can solve these requirements:**
 
-*   Scraping accurate (specific and general) website ranks for multiple keywords, going through multiple result pages (if required)
-*   Country and language specific search results (without using local IP addresses!)
-*   Filter setting support for accurate results
-*   IP/Proxy management and delay mechanisms to avoid detection, gray and blacklistings
-*   Local file based serp-caching with configurable "resolution" to avoid unnecessary requests and speed up later runs
-*   Full support of the seo-proxies.com API
-*   Modular source code design which makes it a LOT easier to adapt the source for own requirements
-*   Pure PHP code, console optimized and with nearly no dependencies/requirements
-*   Preparation for multithreaded usage
+- Scraping accurate (specific and general) website ranks for multiple keywords, going through multiple result pages (if required)
+- Country and language specific search results (without using local IP addresses!)
+- Filter setting support for accurate results
+- IP/Proxy management and delay mechanisms to avoid detection, gray and blacklistings
+- Local file based serp-caching with configurable "resolution" to avoid unnecessary requests and speed up later runs
+- Full support of the seo-proxies.com API
+- Modular source code design which makes it a LOT easier to adapt the source for own requirements
+- Pure PHP code, console optimized and with nearly no dependencies/requirements
+- Preparation for multithreaded usage
 
 I will now cover the principles of scraping and go into detail about some of the rank-checker's features, some information will overlap with my [Advanced Google Serp Scraper](http://google-scraper.squabbel.com) website
 
@@ -50,7 +49,6 @@ Mainly for larger SEO projects it is also important to know the keyword rankings
 
 ## Accurate scraping results
 
- 
 Sounds simple but actually there are multiple traps one can fall into that result in inaccurate search results.
 That might be unimportant for pure link scraping requirements but very important when it comes to rank analysis.
 Some Google parameters can affect ranking results, bad IPs/proxies or too many requests can also change ranking results.
@@ -58,7 +56,7 @@ The free Rank Checker will provide accurate ranking results, filter out advertis
 
 ## Country and language specific scraping results
 
-At first I thought it is impossible to provide country/language specific result pages without using IPs from those countries. 
+At first I thought it is impossible to provide country/language specific result pages without using IPs from those countries.
 I ran many detailed experiments during development and using the finished Google Rank Checker, finally I learned that it is possible to provide accurate location specific results.
 As usual things are not as easy as one might expect!
 Google provides more than 160 different languages and domains, often more than one official language is provided for one country and each language can provide different ranking results.
@@ -84,7 +82,6 @@ A small inaccuracy is always possible, even when using different IPs from the co
 
 ## IP/Proxy management
 
- 
 When scraping Google it is essential to avoid detection. Google does not want to be abused from thousands of people as this could have
 an impact on their servers (and they don't like to share their database with us).
 Avoiding detection is not a hard task if you are doing things right.
@@ -136,24 +133,24 @@ When using seo-proxies.com it is possible to request additional proxy processes 
 
 ## Hints for scraping Google and avoiding detection
 
-*   First you need a reliable proxy source to be able to change your IP-Address.  
-    Of course the proxies have to be high anonymous, they should be fast and there should have been no previous abuse against Google.  
-    I can personally recommend the built in private proxy solution at [www.seo-proxies.com](http://www.seo-proxies.com) but you  
-    can try another proxy solution as long as it delivers quality IPs that without abusive history.  
-    For continued scraping activity you should use between 50 and 150 proxies depending on the  
-    average resultset of each search query. Some projects might require even more.  
-    If you wish to start with a lower number of IPs during development you should still at least get 5 IPs, better 10 or 20. You will need them!  
-    
-*   **Never** continue scraping when Google did detect you! You need automated detection and abort routines like in the free Google Rank Checker.
-*   Make sure you clear Cookies after each IP change or disable them completely, with libCURL cookies are ignored by default
-*   Do not change the number of search results from 10 to a higher number if you wish to receive accurate ranks from Google
-*   Do not use threads (multiple scraping processes at the same time) if it is not really required. That just makes things more complicate.
-*   In the case you receive a virus/captcha warning, it's time to stop immediately.  
-    Captcha means : Your scraping has been detected !  
-    Add more proxies, if you already use 100 or more you might have to use another source  
-    of IPs (see my recommendation for private proxies above, it is unlikely you can find a better source).  
-    If you do your job right you can scrape Google 24 hours a day without being detected.
-*   For reliable scraping you need to avoid any sort of black and graylisting, do not scrape more than 20 requests per hour per IP address.
+- First you need a reliable proxy source to be able to change your IP-Address.  
+  Of course the proxies have to be high anonymous, they should be fast and there should have been no previous abuse against Google.  
+  I can personally recommend the built in private proxy solution at [www.seo-proxies.com](http://www.seo-proxies.com) but you  
+  can try another proxy solution as long as it delivers quality IPs that without abusive history.  
+  For continued scraping activity you should use between 50 and 150 proxies depending on the  
+  average resultset of each search query. Some projects might require even more.  
+  If you wish to start with a lower number of IPs during development you should still at least get 5 IPs, better 10 or 20. You will need them!
+
+- **Never** continue scraping when Google did detect you! You need automated detection and abort routines like in the free Google Rank Checker.
+- Make sure you clear Cookies after each IP change or disable them completely, with libCURL cookies are ignored by default
+- Do not change the number of search results from 10 to a higher number if you wish to receive accurate ranks from Google
+- Do not use threads (multiple scraping processes at the same time) if it is not really required. That just makes things more complicate.
+- In the case you receive a virus/captcha warning, it's time to stop immediately.  
+  Captcha means : Your scraping has been detected !  
+  Add more proxies, if you already use 100 or more you might have to use another source  
+  of IPs (see my recommendation for private proxies above, it is unlikely you can find a better source).  
+  If you do your job right you can scrape Google 24 hours a day without being detected.
+- For reliable scraping you need to avoid any sort of black and graylisting, do not scrape more than 20 requests per hour per IP address.
 
 ## The heart of my article: The free Google Rank Checker, written in PHP for web or console (recommended) usage
 
@@ -162,25 +159,22 @@ Please make sure to read the short license agreement on top of the source code.
 
 This script includes:
 
-*   Scraping accurate (specific and general) website ranks for multiple keywords, going through multiple result pages (if required)
-*   Country and language specific search results (without using local IP addresses!)
-*   IP/Proxy management and delay mechanisms to avoid detection, gray and blacklistings
-*   Local file based serp-caching with configurable "resolution" to avoid unnecessary requests and speed up later runs
-*   Full support of the seo-proxies.com API
-*   Modular source code design which makes it a LOT easier to adapt the source for own requirements
-*   Pure PHP code, console optimized and with nearly no dependencies/requirements
-*   Preparation for multithreaded usage
+- Scraping accurate (specific and general) website ranks for multiple keywords, going through multiple result pages (if required)
+- Country and language specific search results (without using local IP addresses!)
+- IP/Proxy management and delay mechanisms to avoid detection, gray and blacklistings
+- Local file based serp-caching with configurable "resolution" to avoid unnecessary requests and speed up later runs
+- Full support of the seo-proxies.com API
+- Modular source code design which makes it a LOT easier to adapt the source for own requirements
+- Pure PHP code, console optimized and with nearly no dependencies/requirements
+- Preparation for multithreaded usage
 
 For professional projects PHP is well suited but you should use the scraper as console script for best reliability.
 
-Requirements:
- \* PHP 5.2 (5+ should do it) with libCURL and DOM support
- \* An SEO-Proxies.com license for high quality IPs and the Google country API
- \* "write rights" in the local directory, the script will create a working directory for local storage
+Requirements: \* PHP 5.2 (5+ should do it) with libCURL and DOM support \* An SEO-Proxies.com license for high quality IPs and the Google country API \* "write rights" in the local directory, the script will create a working directory for local storage
 
-   ![](https://www.paypalobjects.com/de_DE/i/scr/pixel.gif)
+![](https://www.paypalobjects.com/de_DE/i/scr/pixel.gif)
 
 Download the three source code files here:  
-[simple\_html\_dom.php](source/simple_html_dom.php.txt)  
-[google-rank-checker.php](source/google-rank-checker.php.txt)  
-[functions.php](source/functions.php.txt)  
+[simple_html_dom.php](simple_html_dom.php)  
+[google-rank-checker.php](google-rank-checker.php)  
+[functions.php](functions.php)
